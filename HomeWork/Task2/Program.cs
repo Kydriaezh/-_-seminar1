@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 Console.WriteLine("ВВедите число 1");
 int a = int.Parse(Console.ReadLine());
 
