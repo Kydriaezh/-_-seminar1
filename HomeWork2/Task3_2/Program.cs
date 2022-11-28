@@ -1,30 +1,23 @@
 ﻿// Напишите программу, которая выводит третью цифру
 // заданного числа или сообщает, что третьей цифры нет.
 
-Console.WriteLine("Заклинило меня");
+Console.WriteLine("Введите число");
 int num = int.Parse(Console.ReadLine());
-
-    if (num < 100)   
-    Console.WriteLine("no");    
+string ThirdDigit(int num)
         {
-            while (num > 999)
-            { 
-                num = num / 10; 
+            string result = "нет третьей цифры";
+            if (num > 99)
+            {
+                while (num > 999)
+                {
+                    num = num / 10;
+                }
+                result = $"{num % 10}";
+               
             }
-            Console.WriteLine(num % 10); 
+            return result; 
         }
-       
-    
-   
-
-
-
-
-// while (num > 999)
- { 
-    num = num / 10; 
- } 
-//ьConsole.WriteLine(Xz(num % 10));      
+Console.WriteLine(ThirdDigit(num));   
 
  
  
