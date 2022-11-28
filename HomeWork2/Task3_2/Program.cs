@@ -3,7 +3,7 @@
 
 Console.WriteLine("Введите число");
 int num = int.Parse(Console.ReadLine());
-string ThirdDigit(int num)
+string Thnum (int num)
         {
             string result = "нет третьей цифры";
             if (num > 99)
@@ -17,7 +17,7 @@ string ThirdDigit(int num)
             }
             return result; 
         }
-Console.WriteLine(ThirdDigit(num));   
+Console.WriteLine(Thnum(num));   
 
  
  
