@@ -8,7 +8,7 @@ int NumbCount (int n)
     while (n>0)
     {
         n = n / 10;
-        count++;
+        count ++;
     }
     return count;
 }
