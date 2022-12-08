@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// напишите программу вычисления модуля числа
+Console.WriteLine("DDtlbnt cnxkj");
+int num = int.Parse(Console.ReadLine());
+
+ 
