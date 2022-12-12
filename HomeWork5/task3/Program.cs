@@ -1,7 +1,7 @@
 ﻿// Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива.
 
-void Print(int[] arr)
+void Print(double[] arr)
 {
     int size = arr.Length;
 
@@ -12,28 +12,35 @@ void Print(int[] arr)
     Console.WriteLine();
 }
 
-int[] MassNums(int size)
+double[] MassNums(int size)
 {
-    int[] arr = new int[size];
+    double[] arr = new double[size];
+    Random rnd = new Random();
 
     for (int i = 0; i < size; i++)
     {
-        arr[i] = new Random().Next(1, 10);
+        arr[i] = Math.Round(rnd.NextDouble() * (100 - 1) + 1, 2);
     }
     return arr;
 }
 
-int SummaNechet (int[] arr)
+void Dif(double[] arr)
 {
-  int max = 0;
-  for (int i = 0; i<arr.Length; i++)
-  {
-    if (arr[i] > max)
-    arr[i] = max;
-    max++;
-  }
-  return max;
+  double max = arr [0];
+  double min = arr [0];
+
+    for (int i = 1; i < arr.Length; i++)
+    {
+        if (arr[i] > max)        
+            max = arr[i];
+        
+        else if (arr[i] < min)        
+            min = arr[i];        
+    }
+  Console.WriteLine($"Максимальное число {max}, Минимальное число {min}");
+  Console.WriteLine($"Разница между максимальным и минимальным числом: {Math.Round(max - min, 2)}");
 }
-int[]arr_1 = MassNums(int.Parse(Console.ReadLine()));
+
+double[] arr_1 = MassNums(int.Parse(Console.ReadLine()));
 Print (arr_1);
-Console.WriteLine(SummaNechet(arr_1));
+Dif(arr_1);
