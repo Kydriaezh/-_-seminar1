@@ -4,7 +4,8 @@
 Console.WriteLine("Введите два числа");
 int Stepen (int a, int b)
 {
-    int c = 0;
+    int st = 1;
+    
 
 
 }
